@@ -9,10 +9,10 @@ int main()
 {
     float a, b, suma, diferenta, produsul, catul;
 
-    printf("Introdu valoare lui a=");
+    printf("Introduceti valoarea lui a=");
     scanf("%f", &a);
     
-    printf("Introdu valoare lui b=");
+    printf("Introduceti valoarea lui b=");
     scanf("%f", &b);
 
     suma = a + b;
