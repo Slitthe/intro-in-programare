@@ -2,26 +2,24 @@
 /* 
     Enunt problema:
     
-    -- 2. Se dă un număr natural “N”. Să se găsească suma cifrelor numărului. 
+    -- 4. Să se genereze şirul lui Fibonacci pentru primele “N” numere. 
 */
 
-int main() 
+int main()
 {
-    int numarul, ultimaCifra, suma = 0, numarulInitial;
+    int n, i, firstNumFibo = 0, secondNumFibo = 1, tempSum;
 
-    printf("Valoarea cifrelor urmatorului numar intreg: ");
-    scanf("%d", &numarul);
-    numarulInitial = numarul;
+    printf("Entere the number: ");
+    scanf("%d", &n);
 
-    while(numarul > 0)
+    printf(" %d  %d ", firstNumFibo, secondNumFibo);
+    for(i = 0; i < n; i++)
     {
-        ultimaCifra = numarul % 10;
-        suma += ultimaCifra;
-        numarul = numarul / 10;
+        tempSum = firstNumFibo + secondNumFibo;
+        firstNumFibo = secondNumFibo;
+        secondNumFibo = tempSum;
+        printf(" %d ", tempSum);
     }
-
-    printf("Suma cifrelor numarului %d este = %d", numarulInitial, suma);
 
     return 0;
 }
-
