@@ -24,6 +24,8 @@ int main()
         bigNum = tempNumStorage;
     }
 
+    bigNum = bigNum == a || bigNum == b ? 1 : bigNum;
+
     printf("Cel mai mare divizor comun este: %d", bigNum);
 
     return 0;
