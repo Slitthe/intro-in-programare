@@ -2,40 +2,35 @@
 /*
     Enunt problema:
 
-    -- 1. Se dă un număr natural “N”. Să se testeze dacă este prim sau nu.
+    -- Se dă un număr natural “N”. Să se descompună în factori primi. 
 */
-
-int isPrime(int num);
+void printPrimeFactors(int primeFactors[], int index);
 
 int main()
 {
-    int n;
+    int num, i, primeFactors[100], primeFactorsIndex = 0;
 
-    printf("Introduceti numarul: ");
-    scanf("%d", &n);
+    printf("Introduceti numarul: "); 
+    scanf("%d", &num);
 
-    if(isPrime(n) == 1)
+    while(num > 1) 
     {
-        printf("Numarul este prim");
-    }
-    else
-    {
-        printf("Numarul nu este prim");
-    }
-
-    return 0;
-}
-
-int isPrime(int num)
-{
-    int i, isNumPrime = 1;
-    for(i = num - 1; i > 1; i--)
-    {
-        if(num % i == 0) {
-            isNumPrime = 0;
-            break;
+        for(i = 2; i <= num; i++)
+        {
+            if(num % i == 0) {
+                primeFactors[primeFactorsIndex] = i;
+                primeFactorsIndex++;
+                num /= i;
+                break;
+            }
         }
     }
 
-    return isNumPrime;
+    for(i = 0; i < primeFactorsIndex; i++) 
+    {
+        printf(" %d x", primeFactors[i]);
+    }
+    printf(" 1");
+
+    return 0;
 }
