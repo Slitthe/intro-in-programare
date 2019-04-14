@@ -45,7 +45,7 @@ int main()
 
     printf("Introduceti valoarea lui X: ");
     scanf("%f", &valoareX);
-    printf("\nValoarea polinomului derivat pt X=%d este: %f\n", valoareX, calculareValoareaPolinom(sirPolinom, gradPolinom - gradDerivata, valoareX));
+    printf("\nValoarea polinomului derivat pt X=%f este: %f\n", valoareX, calculareValoareaPolinom(sirPolinom, gradPolinom - gradDerivata, valoareX));
     return 0;
 }
 
